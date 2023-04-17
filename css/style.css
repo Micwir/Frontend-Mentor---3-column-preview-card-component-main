@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --first_last_element-border-radius: 10px;
+}
+
+body {    
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {        
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;        
+    align-items: flex-start;
+    margin: 3rem 0;
+}
+
+section {
+    margin: 0 2rem;
+}
+
+section#sedans {
+    background-color: hsl(31, 77%, 52%);
+}
+
+section#suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+section#luxury {
+    background-color: hsl(179, 100%, 13%);
+}
+
+section > img {
+    padding: 2rem;
+}
+
+section > p {
+    color: hsla(0, 0%, 100%, .75);
+    font-size: 15px;
+    padding: 0 2rem;
+    font-weight: 400;
+}
+
+.headline {
+    color: hsl(0, 0%, 95%);
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-top: 0;
+}
+
+.btn-learn_more {
+    all: unset;
+    margin: 1rem 0 2rem 2rem;
+    background-color: hsl(0, 0%, 95%); 
+    padding: 1rem 2rem;
+    border-radius: 100px;   
+    font-size: 15px;
+    border: 2px solid hsl(0, 0%, 95%);
+}
+
+section#sedans > .btn-learn_more {
+    color: hsl(31, 77%, 52%);    
+}
+
+section#sedans > .btn-learn_more:hover,
+section#sedans > .btn-learn_more:active {
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(31, 77%, 52%);    
+}
+
+section#suvs > .btn-learn_more {
+    color: hsl(184, 100%, 22%);
+}
+
+section#suvs > .btn-learn_more:hover,
+section#suvs > .btn-learn_more:active {
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(184, 100%, 22%);
+}
+
+section#luxury > .btn-learn_more {
+    color: hsl(179, 100%, 13%);
+}
+
+section#luxury > .btn-learn_more:hover,
+section#luxury > .btn-learn_more:active {
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(179, 100%, 13%);
+}
+
+.btn-learn_more:hover {
+    cursor: pointer;
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    align-self: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 900px) {
+
+    html {
+        height: 100%;
+    }
+    body{
+        height: 100%;
+    }
+    main {
+        height: 100%;
+        flex-direction: row;
+        margin: 0 auto;
+        align-items: center;
+        border-radius: 1px;
+        max-width: 900px;
+    }
+
+    section{
+        margin: 0;        
+        height: 450px;
+        position: relative;
+    }
+
+    section:first-of-type {
+        border-top-left-radius: var(--first_last_element-border-radius);
+        border-bottom-left-radius: var(--first_last_element-border-radius);
+    }
+
+    section:last-of-type {
+        border-top-right-radius: var(--first_last_element-border-radius);
+        border-bottom-right-radius: var(--first_last_element-border-radius);
+    }
+
+    .btn-learn_more {
+        position: absolute;
+        margin: 0;
+        bottom: 2rem;
+        left: 2rem;
+    }
+}
